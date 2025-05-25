@@ -27,7 +27,7 @@
 ## 🖥 Як запустити
 
 ```bash
-git clone https://github.com/your-username/my-projektStart.git
+git clone  https://vv17-02b.github.io/my-projektStart/
 cd my-projektStart
 npm install
 npm run dev
