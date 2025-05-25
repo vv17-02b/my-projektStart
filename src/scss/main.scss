@@ -1,0 +1,30 @@
+// main.scss
+
+// Базові підключення
+@use "vars" as *;
+@use "mixins" as *;
+@use "fonts" as *;
+@use "settings" as *;
+@use "variables" as *;
+
+// Підключення компонентів сторінки
+// @use "components/footer";
+@use "components/header";
+@use "components/hero";
+@use "components/cartBtn";
+@use "components/about";
+@use "components/productslider";
+@use "components/services";
+@use "components/footer";
+
+
+
+// @use "components/nav";
+// @use "components/popup";
+// @use "components/btn";
+// @use "components/form";
+// @use "components/logo";
+// @use "components/phone";
+// @use "components/social";
+
+@use "vendor";

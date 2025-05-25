@@ -1,0 +1,18 @@
+// vendor.scss
+
+@use "vendor/normalize" as *;
+
+// стилі для модального вікна
+@use "../../node_modules/graph-modal/dist/graph-modal.min" as graph-modal;
+
+// стилі для табів
+@use "../../node_modules/graph-tabs/dist/graph-tabs.min" as graph-tabs;
+
+// стилі для бібліотеки aos
+// @use "../../node_modules/aos/dist/aos" as aos;
+
+// стилі для свайпера
+@use "../../node_modules/swiper/swiper-bundle.min" as swiper;
+
+// стилі для simplebar
+@use "../../node_modules/simplebar/dist/simplebar.min" as simplebar;

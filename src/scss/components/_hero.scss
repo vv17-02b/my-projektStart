@@ -1,0 +1,155 @@
+// === ЗМІННІ === //
+$light-bg: #ffffff;
+$light-text: #000000;
+$dark-bg: #1e1e1e;
+$dark-text: #f0f0f0;
+$primary: #007bff;
+$transition: all 0.3s ease;
+
+:root {
+    --bg: #{$light-bg};
+    --text: #{$light-text};
+    --primary: #{$primary};
+}
+
+[data-theme="dark"] {
+    --bg: #{$dark-bg};
+    --text: #{$dark-text};
+}
+
+.heroPage {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 6rem 2rem;
+    min-height: 100vh;
+    background-color: var(--bg);
+    color: var(--text);
+    transition: background-color 0.4s ease, color 0.4s ease;
+    gap: 2rem;
+
+    @media (max-width: 1024px) {
+        flex-direction: column;
+        padding: 4rem 1.5rem;
+    }
+
+    @media (max-width: 480px) {
+        padding: 3rem 1rem;
+    }
+
+    @media (max-width: 360px) {
+        padding: 2rem 1rem;
+    }
+
+    &__left {
+        text-align: center;
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+        max-width: 700px;
+        margin: 0 auto;
+
+        @media (max-width: 1024px) {
+            align-items: center;
+            text-align: center;
+        }
+
+        h1 {
+            max-width: 690px;
+            margin: 0;
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            color: var(--text);
+
+            @media (max-width: 768px) {
+                font-size: 2.2rem;
+            }
+
+            @media (max-width: 480px) {
+                font-size: 1.8rem;
+            }
+
+            @media (max-width: 360px) {
+                font-size: 1.5rem;
+            }
+        }
+
+        p {
+            margin: 0;
+            padding: 0;
+            font-size: 1.125rem;
+            max-width: 690px;
+            opacity: 0.9;
+            margin-bottom: 3rem;
+            color: var(--text);
+
+            @media (max-width: 768px) {
+                font-size: 1rem;
+            }
+
+            @media (max-width: 480px) {
+                font-size: 0.95rem;
+            }
+
+            @media (max-width: 360px) {
+                font-size: 0.875rem;
+            }
+        }
+
+        .btn__by-tultip {
+            margin: 0 auto;
+            display: inline-block;
+            padding: 0.75rem 1.5rem;
+            background-color: var(--text);
+            color: var(--bg);
+            border-radius: 6px;
+            font-weight: 600;
+            cursor: pointer;
+            text-align: center;
+            transition: background-color 0.3s ease, color 0.3s ease;
+           margin-bottom: 20px;
+            &:hover {
+                background-color: var(--primary);
+                color: #fff;
+            }
+
+            @media (max-width: 360px) {
+                padding: 0.6rem 1.2rem;
+                font-size: 0.9rem;
+            }
+        }
+    }
+
+    &__right {
+        flex: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        max-width: 600px;
+
+        @media (max-width: 1024px) {
+            margin-top: 2rem;
+            max-width: 100%;
+        }
+
+        .heroPage__image {
+            max-width: 100%;
+            max-height: 450px;
+            border-radius: 12px;
+            object-fit: contain;
+            //   box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+            transition: opacity 0.8s ease-in-out;
+
+            @media (max-width: 480px) {
+                max-height: 300px;
+            }
+
+            @media (max-width: 360px) {
+                max-height: 250px;
+            }
+        }
+    }
+}
+

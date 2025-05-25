@@ -1,0 +1,94 @@
+.footer {
+    background-color: #acaaaa;
+    color: #fff;
+    padding: 50px 20px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 25px;
+    z-index: 1;
+  
+    .footer__text {
+      font-size: 15px;
+      color: #ccc;
+      transition: color 0.3s ease;
+    }
+  
+    .footer__socials {
+      display: flex;
+      gap: 20px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+  
+    .footer__icon {
+      width: 50px;
+      height: 50px;
+      background-color: #222;
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      transition: all 0.3s ease;
+      cursor: pointer;
+  
+      svg {
+        width: 32px;
+        height: 32px;
+        fill: #fff;
+        transition: transform 0.3s, fill 0.3s;
+      }
+  
+      &:hover {
+        background-color: #444;
+        transform: scale(1.15);
+  
+        svg {
+          fill: #1da1f2; // Можеш замінити на свій бренд-колір
+          transform: rotate(5deg);
+        }
+      }
+    }
+  
+    @media (max-width: 768px) {
+      padding: 40px 15px;
+  
+      .footer__text {
+        font-size: 14px;
+      }
+  
+      .footer__icon {
+        width: 45px;
+        height: 45px;
+  
+        svg {
+          width: 24px;
+          height: 24px;
+        }
+      }
+    }
+  
+    @media (max-width: 480px) {
+      padding: 30px 10px;
+  
+      .footer__text {
+        font-size: 13px;
+      }
+  
+      .footer__icon {
+        width: 40px;
+        height: 40px;
+  
+        svg {
+          width: 22px;
+          height: 22px;
+        }
+      }
+  
+      .footer__socials {
+        gap: 15px;
+      }
+    }
+  }
+  

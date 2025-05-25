@@ -1,0 +1,191 @@
+@use "mixins" as *;
+
+// === Глобальні кольори ===
+$light-bg: #ffffff;
+$light-text: #000000;
+$dark-bg: #1e1e1e;
+$dark-text: #ffffff; // змінив на білий
+$primary: #007bff;
+$transition: all 0.3s ease;
+
+// === CSS-змінні для тем ===
+:root {
+    --bg: #{$light-bg};
+    --text: #{$light-text};
+    --primary: #{$primary};
+    --secondary: #f8f9fa;
+
+    --container-width: 1240px;
+    --container-fluid-width: 100%;
+    --container-offset: 16px;
+}
+
+[data-theme="dark"] {
+    --bg: #{$dark-bg};
+    --text: #{$dark-text};
+    --primary: #4e9eff;
+    --secondary: #262626;
+}
+.about-section,
+.product-slider,
+.discount-timer,
+#services,
+#contact {
+    background-color: var(--secondary);
+    color: var(--text);
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+// === Базові стилі ===
+html {
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+body {
+    background-color: var(--bg);
+    color: var(--text);
+    transition: background-color 0.3s ease, color 0.3s ease;
+    font-family: "Segoe UI", sans-serif;
+}
+
+// === Стилі для секцій ===
+section {
+    padding: 3rem 1.5rem;
+    background-color: var(--secondary);
+    color: var(--text); // ✅ додано для білих текстів у темній темі
+    transition: background-color 0.4s, color 0.4s;
+
+    @include mobile {
+        padding: 2rem 1rem;
+    }
+}
+
+// === Глобальні елементи ===
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+button {
+    cursor: pointer;
+}
+
+// === Утиліти (resets) ===
+.is-hidden {
+    display: none !important;
+}
+
+.btn-reset {
+    border: none;
+    padding: 0;
+    background: transparent;
+    cursor: pointer;
+}
+
+.list-reset {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.input-reset {
+    appearance: none;
+    border: none;
+    border-radius: 0;
+    background-color: #fff;
+
+    &::-webkit-search-decoration,
+    &::-webkit-search-cancel-button,
+    &::-webkit-search-results-button,
+    &::-webkit-search-results-decoration {
+        display: none;
+    }
+}
+
+.visually-hidden {
+    position: absolute;
+    overflow: hidden;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    width: 1px;
+    height: 1px;
+    clip: rect(0 0 0 0);
+}
+
+// === Контейнери ===
+.container {
+    margin: 0 auto;
+    padding: 0 var(--container-offset);
+    max-width: var(--container-width);
+}
+
+.container-fluid {
+    margin: 0 auto;
+    padding: 0 var(--container-offset);
+    max-width: var(--container-fluid-width);
+}
+
+// === Анімація ===
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+// === Утиліти ===
+.centered {
+    text-align: center;
+}
+
+.dis-scroll {
+    position: fixed;
+    left: 0;
+    top: 0;
+    overflow: hidden;
+    width: 100%;
+    height: 100vh;
+    overscroll-behavior: none;
+}
+
+.page--ios .dis-scroll {
+    position: relative;
+}
+
+.section-offset {
+    padding: 120px 0;
+
+    @include mobile {
+        padding: 80px 0;
+    }
+}
+
+.js-focus-visible :focus:not(.focus-visible) {
+    outline: none;
+}
+main {
+    flex: 1 0 auto; // Головний блок розтягується
+}
+
+// Footer прижимається до низу автоматично
+.footer {
+    flex-shrink: 0;
+}

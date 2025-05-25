@@ -1,0 +1,42 @@
+// === Змінні теми === 
+:root {
+    --primary: #1a1a1a;
+    --secondary: #ffffff;
+    --text: #000000;
+    --accent: #ff7f50;
+  }
+  
+  [data-theme="dark"] {
+    --primary: #ffffff;
+    --secondary: #1a1a1a;
+    --text: #ffffff;
+    --accent: #ff7f50;
+  }
+  
+  // === Загальні стилі ===
+  body {
+    background-color: var(--bg);
+    color: var(--text);
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+  
+  section {
+    padding: 4rem 1rem;
+    background-color: var(--secondary);
+    color: var(--text); // додано, щоб текст був білий в темній темі
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+  
+  a {
+    color: var(--text);
+    text-decoration: none;
+    transition: color 0.2s;
+  
+    &:hover {
+      color: var(--primary);
+    }
+  }
+  
