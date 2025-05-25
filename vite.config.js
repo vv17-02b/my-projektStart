@@ -18,5 +18,6 @@ export default defineConfig({
         `
             }
         }
-    }
+    },
+    base: '/my-projektStart/'// 💡 Додай це, якщо публікуєш на GitHub Pages
 });
