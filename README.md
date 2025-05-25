@@ -1,12 +1,33 @@
-# React + Vite
+# My Project Start 🚀
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Це сучасний React-проєкт з підтримкою SCSS, адаптивним дизайном, темною/світлою темою, слайдерами, попапами, формами та футером із соціальними іконками.
 
-Currently, two official plugins are available:
+## 📸 Скриншот
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+![Preview](src/assets/map.png)
 
-## Expanding the ESLint configuration
+## ⚙️ Стек технологій
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- React
+- SCSS (Sass)
+- Vite
+- LocalStorage (для збереження теми)
+- Адаптивна верстка (Mobile First)
+- FontAwesome для іконок
+
+## 🔧 Функціонал
+
+- 🌙 Темна/світла тема
+- 🧾 Динамічні секції: "Про нас", "Слайдер", "Послуги", "Карта", "Форма замовлення"
+- 📞 Кнопка замовлення зворотного дзвінка з формою (ім’я, телефон, коментар)
+- 📱 Адаптивність до мобільних пристроїв
+- 👣 Footer із соціальними іконками з ефектами
+- 🧩 Модульна структура компонентів
+
+## 🖥 Як запустити
+
+```bash
+git clone https://github.com/your-username/my-projektStart.git
+cd my-projektStart
+npm install
+npm run dev
